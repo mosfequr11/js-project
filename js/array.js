@@ -1,21 +1,21 @@
-// var fruite = [23, 24, 25, 26, 27, 28];
-// var vegitable = [3, 4, 5, 6, 7, 8];
-// var inegration = fruite.concat(vegitable);
-// document.write(inegration);
-// document.write("<hr>")
-// fruite.shift();
-// document.write(fruite);
+var fruite = [23, 24, 25, 26, 27, 28];
+var vegitable = [3, 4, 5, 6, 7, 8];
+var inegration = fruite.concat(vegitable);
+document.write(inegration);
+document.write("<hr>");
+fruite.shift();
+document.write(fruite);
 
-const cars = ["Saab", "Volvo", "BMW"];
-const person = { firstName: "John", lastName: "Doe", age: 46 };
+// const cars = ["Saab", "Volvo", "BMW"];
+// const person = { firstName: "John", lastName: "Doe", age: 46 };
 // document.getElementById("demo").innerHTML = cars;
 // document.getElementById("demo").innerHTML = person;
 // console.log(cars);
 // console.log(cars.length);
 // console.log(person);
 
-const fruits = ["Banana", "Orange", "Apple", "Mango"];
-fruits[4] = "Pineapples";
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// fruits[4] = "Pineapples";
 // console.log(fruits);
 // let fruit = fruits[0];
 // console.log(fruits[0]);
