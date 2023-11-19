@@ -25,3 +25,14 @@ var buttonin = document.getElementById("buttonin");
 buttonin.addEventListener("mouseover", manyEventHandlers);
 buttonin.addEventListener("click", manyEventHandlersClick);
 buttonin.addEventListener("mouseout", manyEventHandlersOut);
+
+// Passing Parameters
+function passingParameters(text) {
+  // alert(text);
+  document.getElementById("outputPram").innerHTML += text;
+}
+
+var buttonin2 = document.getElementById("buttonin2");
+buttonin2.addEventListener("mouseover", function () {
+  passingParameters("Hello Wrold");
+});
