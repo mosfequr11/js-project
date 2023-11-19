@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Events current target</title>
+</head>
+<style>
+	.card {
+		height: 100px;
+		width: 400px;
+		background-color: rgb(234, 245, 190);
+		margin-top: 30px;
+		display: block;
+		position: relative;
+		text-align: center;
+	}
+</style>
+
+<body>
+
+	<div id="container" class="card" onclick="currentTargetArea(event)">
+		<h3>Events current target</h3>
+		<button id="buttonin" type="button">current target</button>
+		<p id="output"></p>
+	</div>
+
+
+	<script>
+		function currentTargetArea(event) {
+			let text = event.target.tagName;
+			document.getElementById("output").innerHTML = text;
+		}
+	</script>
+
+</body>
+
+</html>
