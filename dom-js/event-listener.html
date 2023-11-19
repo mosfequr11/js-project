@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Event Listener</title>
+</head>
+<style>
+  .card {
+    height: 100px;
+    width: 400px;
+    background-color: rgb(234, 245, 190);
+    margin-top: 30px;
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+
+  .card2 {
+    height: 100px;
+    width: 400px;
+    background-color: rgb(236, 222, 237);
+    margin-top: 30px;
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+
+  #output {
+    z-index: 5;
+    position: relative;
+  }
+</style>
+
+<body>
+  <h3 id="color-change">DOM Event Listener</h3>
+  <p>Add an Event Handler to an Element</p>
+  <button id="buttonout"="button">an Event Handler</button>
+
+  <div id="container" class="card">
+    <p>Add Many Event Handlers to the Same Element</p>
+    <button id="buttonin" type="button">Many Event Handlers</button>
+    <p id="output"></p>
+  </div>
+
+  <div id="container2" class="card2">
+    <p>Add Many Event Handlers to the Same Element</p>
+    <button id="buttonin2" type="button">Click on</button>
+  </div>
+
+  <script src="js/event-listener.js"></script>
+</body>
+
+</html>
