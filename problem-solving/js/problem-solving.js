@@ -6,15 +6,26 @@
 // console.log(duplicate);
 
 //count vowel in a sentense
-const vowel = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
-function countVowel(sentense) {
-  let count = 0;
-  const letters = Array.from(sentense);
-  letters.forEach(function (value) {
-    if (vowel.includes(value)) {
-      count++;
-    }
-  });
-  return count;
+// const vowel = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+// function countVowel(sentense) {
+//   let count = 0;
+//   const letters = Array.from(sentense);
+//   letters.forEach(function (value) {
+//     if (vowel.includes(value)) {
+//       count++;
+//     }
+//   });
+//   return count;
+// }
+// console.log(countVowel("Aeiou Aeiou Ae"));
+
+// check leap year
+function leapYear(year) {
+  if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0)) {
+    console.log(`${year} is a leap year`);
+  } else {
+    console.log(`${year} is not a leap year`);
+  }
 }
-console.log(countVowel("Aeiou Aeiou Ae"));
+leapYear(2028);
+leapYear(2026);
