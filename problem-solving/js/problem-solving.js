@@ -31,7 +31,16 @@
 // leapYear(2026);
 
 // Separate the sentence into letter
-const sentense = "Hellow World";
-console.log(sentense);
-const letters = Array.from(sentense);
-console.log(letters);
+// const sentense = "Hellow World";
+// console.log(sentense);
+// const letters = Array.from(sentense);
+// console.log(letters);
+
+// Sort a number in descending
+const roll_number = [7, 9, 6, 4, 8, 3, 2];
+console.log(
+  roll_number.sort(function (a, b) {
+    // return a - b;
+    return b - a;
+  })
+);
