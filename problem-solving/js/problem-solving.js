@@ -37,10 +37,19 @@
 // console.log(letters);
 
 // Sort a number in descending
-const roll_number = [7, 9, 6, 4, 8, 3, 2];
-console.log(
-  roll_number.sort(function (a, b) {
-    // return a - b;
-    return b - a;
-  })
-);
+// const roll_number = [7, 9, 6, 4, 8, 3, 2];
+// console.log(
+//   roll_number.sort(function (a, b) {
+//     // return a - b;
+//     return b - a;
+//   })
+// );
+
+// Random number
+let u = Math.random() * 10;
+let v = Math.floor(Math.random() * 10 + 1);
+console.log(v);
+
+// sort name(word)
+const student = ["Mosfequr", "Mehfuz", "Imran"];
+console.log(student.sort());
