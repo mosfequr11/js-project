@@ -1,15 +1,11 @@
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("container").innerHTML = this.responseText;
-      console.log(this.getResponseHeader("cache-control"));
-    }
-  };
-  xhttp.open(
-    "GET",
-    "http://127.0.0.1:5500/ajax/file/change-text-respons.txt",
-    true
-  );
-  xhttp.send();
+function getData() {
+  sendRequest("GET", "https://jsonplaceholder.typicode.com/todos/test")
+    .then((responseData) => {
+      console.log(responseData);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
+const getButton = document.getElementById("get");
+getButton.addEventListener("click", getData);
