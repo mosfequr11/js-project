@@ -25,6 +25,7 @@ function getDataFun() {
     // console.log(typeof xhttp.responseText);
     //converted the data string to valid javascript an object
     console.log(JSON.parse(xhttp.responseText));
+    document.getElementById("show-data").innerHTML = xhttp.responseText;
   };
   xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/1", true);
   xhttp.send();
