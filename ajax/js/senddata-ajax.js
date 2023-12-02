@@ -48,8 +48,8 @@
 // getButton.addEventListener("click", getDataFun);
 
 //sendRequest() function for send data
-function sendRequest(method, url) {
-  const promise = new Promise((resolve, reject) => {
+function sendRequest(method, url, data) {
+  const promise = new Promise((resolve) => {
     const xhttp = new XMLHttpRequest();
 
     xhttp.onload = function () {
@@ -59,7 +59,7 @@ function sendRequest(method, url) {
 
     xhttp.responseType = "json";
 
-    xhttp.send();
+    xhttp.send(data);
   });
 
   return promise;
