@@ -10,7 +10,7 @@ var dataType =
   '{"name":"Md", "age":28, "skills": ["JavaScript", "Shopify", "WordPress"], "car": "BMW","reading": "yes"}';
 console.log(dataType);
 var dataTypeToObj = JSON.parse(dataType);
-console.log(dataTypeToObj.name);
+// console.log(dataTypeToObj.name);
 // You can access a JavaScript object like this:
 console.log(dataTypeToObj["name"]);
 // Data can be modified like this:
@@ -21,6 +21,15 @@ console.log(dataTypeToObj.age);
 console.log(dataTypeToObj.skills);
 // a boolean
 console.log(dataTypeToObj.reading);
+
+// nested object
+console.log("nested object");
+var studentInfo = {
+  person: { name: "Mosfequr", age: 28, city: "Dhaka" },
+  sale: true,
+};
+console.log(studentInfo);
+console.log(studentInfo.person.city);
 
 // In JavaScript values can be all of the above, plus any other valid JavaScript expression, including:
 // a function
