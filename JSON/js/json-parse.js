@@ -15,9 +15,21 @@ var dataType =
 // console.log(dataParse);
 
 // The JSON.parse() method support Date.
-var dataData =
-  '{"name":"Md", "age":"11-05-2020", "skills": "Shopify", "car": "BMW","reading": "yes"}';
-var dataParse = JSON.parse(dataData);
-console.log(dataParse.age);
-var birth = new Date(dataParse.age);
-console.log(birth);
+// var dataData =
+//   '{"name":"Md", "age":"11-05-2020", "skills": "Shopify", "car": "BMW","reading": "yes"}';
+// var dataParse = JSON.parse(dataData);
+// console.log(dataParse.age);
+// var birth = new Date(dataParse.age);
+// console.log(birth);
+
+// Convert a string into a date, using the reviver function:
+const varReviver = '{"name":"Mosfequr", "birth":"1997-05-11", "city":"Dhaka"}';
+const objReviver = JSON.parse(varReviver, function (key, value) {
+  if (key == "birth") {
+    return new Date(value);
+  } else {
+    return value;
+  }
+});
+document.getElementById("showdata").innerHTML =
+  objReviver.name + " birth  day is : " + objReviver.birth;
