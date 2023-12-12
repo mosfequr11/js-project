@@ -9,7 +9,15 @@ var dataType =
 // console.log(dataParse);
 
 // The JSON.parse() method does not support undefine.
-var dataUndefine =
-  '{"name":"Md", "age":28, "skills": undefine, "car": "BMW","reading": "yes"}';
-var dataParse = JSON.parse(dataUndefine);
-console.log(dataParse);
+// var dataUndefine =
+//   '{"name":"Md", "age":28, "skills": undefine, "car": "BMW","reading": "yes"}';
+// var dataParse = JSON.parse(dataUndefine);
+// console.log(dataParse);
+
+// The JSON.parse() method support Date.
+var dataData =
+  '{"name":"Md", "age":"11-05-2020", "skills": "Shopify", "car": "BMW","reading": "yes"}';
+var dataParse = JSON.parse(dataData);
+console.log(dataParse.age);
+var birth = new Date(dataParse.age);
+console.log(birth);
