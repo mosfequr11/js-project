@@ -22,8 +22,10 @@ var dataType =
 // var birth = new Date(dataParse.age);
 // console.log(birth);
 
-// Convert a string into a date, using the reviver function:
+// Or, you can use the second parameter, of the JSON.parse() function, called reviver.
+// The reviver parameter is a function that checks each property, before returning the value.
 const varReviver = '{"name":"Mosfequr", "birth":"1997-05-11", "city":"Dhaka"}';
+console.log(varReviver);
 const objReviver = JSON.parse(varReviver, function (key, value) {
   if (key == "birth") {
     return new Date(value);
@@ -33,3 +35,10 @@ const objReviver = JSON.parse(varReviver, function (key, value) {
 });
 document.getElementById("showdata").innerHTML =
   objReviver.name + " birth  day is : " + objReviver.birth;
+// parsing  function
+// a birth property is an object
+console.log(objReviver);
+
+// before using the revive function
+var objReviver2 = JSON.parse(varReviver);
+console.log(objReviver2);
