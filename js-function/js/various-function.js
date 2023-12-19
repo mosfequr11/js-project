@@ -31,17 +31,30 @@
 // x.a();
 
 // find the maximum number using a function //
-x = findMax(1, 123, 500, 115, 44, 88);
+// x = findMax(1, 123, 500, 115, 44, 88);
+// console.log(x);
+// function findMax() {
+//   let max = -Infinity;
+//   // check total number length
+//   // console.log(arguments.length);
+//   for (let i = 0; i < arguments.length; i++) {
+//     if (arguments[i] > max) {
+//       max = arguments[i];
+//       //  console.log(max);
+//     }
+//   }
+//   return max;
+// }
+
+// get sum passing many variables inside of a function
+x = sumAll(1, 2, 6, 5, 2, 1, 6, 7);
 console.log(x);
-function findMax() {
-  let max = -Infinity;
-  // check total number length
-  // console.log(arguments.length);
+function sumAll() {
+  let sum = 0;
   for (let i = 0; i < arguments.length; i++) {
-    if (arguments[i] > max) {
-      max = arguments[i];
-      //  console.log(max);
-    }
+    //check all numbers passed in the function
+    console.log(arguments[i]);
+    sum += arguments[i];
   }
-  return max;
+  return sum;
 }
