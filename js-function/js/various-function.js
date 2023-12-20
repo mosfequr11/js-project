@@ -59,7 +59,19 @@
 //   return sum;
 // }
 
+// get sum of  passing many variables
+function sum(...args) {
+  let sum = 0;
+  for (let arg of args) {
+    console.log(sum);
+    sum += arg;
+  }
+  return sum;
+}
+let x = sum(1, 2, 6, 5, 2, 1, 6, 7);
+console.log(x);
+
 // function called itself
-(function () {
-  console.log("Hello! I called myself");
-})();
+// (function () {
+//   console.log("Hello! I called myself");
+// })();
