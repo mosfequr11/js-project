@@ -47,14 +47,19 @@
 // }
 
 // get sum passing many variables inside of a function
-x = sumAll(1, 2, 6, 5, 2, 1, 6, 7);
-console.log(x);
-function sumAll() {
-  let sum = 0;
-  for (let i = 0; i < arguments.length; i++) {
-    //check all numbers passed in the function
-    console.log(arguments[i]);
-    sum += arguments[i];
-  }
-  return sum;
-}
+// x = sumAll(1, 2, 6, 5, 2, 1, 6, 7);
+// console.log(x);
+// function sumAll() {
+//   let sum = 0;
+//   for (let i = 0; i < arguments.length; i++) {
+//     //check all numbers passed in the function
+//     console.log(arguments[i]);
+//     sum += arguments[i];
+//   }
+//   return sum;
+// }
+
+// function called itself
+(function () {
+  console.log("Hello! I called myself");
+})();
