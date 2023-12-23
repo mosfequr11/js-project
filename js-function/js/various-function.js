@@ -60,18 +60,34 @@
 // }
 
 // get sum of  passing many variables
-function sum(...args) {
-  let sum = 0;
-  for (let arg of args) {
-    console.log(sum);
-    sum += arg;
-  }
-  return sum;
-}
-let x = sum(1, 2, 6, 5, 2, 1, 6, 7);
-console.log(x);
+// function sum(...args) {
+//   let sum = 0;
+//   for (let arg of args) {
+//     console.log(sum);
+//     sum += arg;
+//   }
+//   return sum;
+// }
+// let x = sum(1, 2, 6, 5, 2, 1, 6, 7);
+// console.log(x);
 
 // function called itself
 // (function () {
 //   console.log("Hello! I called myself");
 // })();
+
+// Objects are Passed by Reference //
+// function defination
+// here x is a function parameter
+function passedReference(xPram) {
+  xPram.one = 7;
+  console.log(xPram.one);
+  return xPram.one * xPram.two;
+}
+// mObj is a object
+let mObj = {
+  one: 3,
+  two: 4,
+};
+// mObj passed by arguments
+console.log(passedReference(mObj));
