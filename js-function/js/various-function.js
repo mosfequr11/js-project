@@ -79,15 +79,23 @@
 // Objects are Passed by Reference //
 // function defination
 // here x is a function parameter
-function passedReference(xPram) {
-  xPram.one = 7;
-  console.log(xPram.one);
-  return xPram.one * xPram.two;
+// function passedReference(xPram) {
+//   xPram.one = 7;
+//   console.log(xPram.one);
+//   return xPram.one * xPram.two;
+// }
+// // mObj is a object
+// let mObj = {
+//   one: 3,
+//   two: 4,
+// };
+//
+// console.log(passedReference(mObj));
+
+// receive many arguments
+function receiveArguments(x, y) {
+  console.log(arguments);
+  console.log(x * y);
+  // return x * y;
 }
-// mObj is a object
-let mObj = {
-  one: 3,
-  two: 4,
-};
-// mObj passed by arguments
-console.log(passedReference(mObj));
+console.log(receiveArguments(3, 7, 6, 5));
