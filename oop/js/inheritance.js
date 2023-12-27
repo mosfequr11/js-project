@@ -40,3 +40,19 @@ const objCat = new Cat("Cat");
 objCat.eat();
 objCat.sleep();
 objCat.meow();
+
+// define another subclass called Dog that also inherits from Animal
+class Dog extends Animal {
+  constructor(name) {
+    super(name);
+  }
+
+  bark() {
+    console.log(`${this.name} says woof.`);
+  }
+
+  // override the eat method of Animal
+  eat() {
+    console.log(`${this.name} is eating from a bowl.`);
+  }
+}
