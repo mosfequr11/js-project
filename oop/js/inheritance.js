@@ -40,6 +40,7 @@ const objCat = new Cat("Cat");
 objCat.eat();
 objCat.sleep();
 objCat.meow();
+console.log("break");
 
 // define another subclass called Dog that also inherits from Animal
 class Dog extends Animal {
@@ -54,5 +55,24 @@ class Dog extends Animal {
   // override the eat method of Animal
   eat() {
     console.log(`${this.name} is eating from a bowl.`);
+  }
+}
+
+// create an array of animals
+let animalsarr = [new Cat("loly"), new Dog("Barby")];
+
+// loop through the array and call methods on each animal
+for (let animal of animalsarr) {
+  animal.eat();
+  animal.sleep();
+
+  // check if the animal is a cat and call the meow method if it is
+  if (animal instanceof Cat) {
+    animal.meow();
+  }
+
+  // check if the animal is a dog and call the bark method if it is
+  if (animal instanceof Dog) {
+    animal.bark();
   }
 }
