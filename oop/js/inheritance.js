@@ -58,7 +58,7 @@ class Dog extends Animal {
   }
 }
 
-// create an array of animals
+// create an array of all child class
 let animalsarr = [new Cat("loly"), new Dog("Barby")];
 
 // loop through the array and call methods on each animal

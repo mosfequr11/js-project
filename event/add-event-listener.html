@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>addEventListener</title>
+</head>
+<style>
+  .card {
+    height: 100px;
+    width: 400px;
+    background-color: rgb(162, 255, 197);
+    margin-top: 30px;
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+
+  #output {
+    z-index: 5;
+    position: relative;
+  }
+</style>
+
+<body>
+  <h3 id="color-change">JS addEventListener()</h3>
+
+  <div id="container" class="card">
+    <p>Add Many Event Handlers to the Same Element with Passing Parameters</p>
+    <button id="parameterPass" type="button">Passing Parameters</button>
+    <p id="outputPram"></p>
+  </div>
+
+  <script src="js/add-event-listener.js"></script>
+</body>
+
+</html>
