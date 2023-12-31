@@ -11,3 +11,10 @@ listLan.addEventListener("click", (e) => {
     }
   }
 });
+
+// add a new element inside ul list (Event delegation)
+function addNewElement() {
+  const newElement = document.createElement("li");
+  newElement.textContent = "Python";
+  listLan.appendChild(newElement);
+}
