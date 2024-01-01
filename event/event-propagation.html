@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Event propagation </title>
+</head>
+<style>
+  * {
+    font-family: sans-serif;
+    color: #ffffff;
+    background-color: #212121;
+  }
+
+  .container {
+    margin: 50px;
+  }
+
+  h1 {
+    border-bottom: 1px solid #ffffff;
+  }
+
+  .parent {
+    margin-top: 30px;
+    padding: 60px 40px;
+    border: 10px solid #ffffff;
+    border-radius: 5px;
+    width: 500px;
+    background-color: burlywood;
+  }
+
+  form {
+    padding: 20px;
+    border: 10px solid #b40f0f;
+    border-radius: 5px;
+    padding: 40px 20px;
+    background-color: rgb(155, 60, 239);
+
+    button {
+      background-color: #ffffff;
+      border: 1px solid #333333;
+      border-radius: 5px;
+      padding: 6px 12px;
+      box-shadow: 4px 4px #000000;
+      font-size: 20px;
+      color: #333333;
+    }
+</style>
+
+<body>
+  <div class="container">
+    <h1>Event propagation</h1>
+    <p>The event propagation mode determines in which order the elements receive the event.</p>
+
+    <div class="parent" id="parent">
+      <form id="form">
+        <button type="button" id="button">Click here</button>
+      </form>
+    </div>
+  </div>
+  <script src="js/event-propagation.js"></script>
+</body>
+
+</html>
