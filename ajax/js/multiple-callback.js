@@ -10,7 +10,7 @@ function loadDoc(callbackFunction) {
     callbackFunction(xhttp);
   };
   //if single
-  xhttp.open("GET", "http://127.0.0.1:5500/ajax/file/change-text.txt");
+  xhttp.open("GET", "http://127.0.0.1:5500/ajax/file/my-info.txt");
   //if multiple
   // xhttp.open("GET", url);
   xhttp.send();
