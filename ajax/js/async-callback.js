@@ -1,20 +1,48 @@
-// how to handle javascript synchronous blocking behavior
+// using callback to handle javascript synchronous blocking behavior
 /// start ///
-const takeOrder = (customer) => {
+const takeOrder = (customer, callback) => {
   console.log(`take order for ${customer}`);
+  callback(customer);
 };
 const processOrder = (customer) => {
   console.log(`order processing for ${customer}`);
   setTimeout(() => {
     console.log(`cooking completed`);
     console.log(`order processing for ${customer} is successful`);
+    callback(customer);
   }, 1000);
 };
 
 const completeOrder = (customer) => {
   console.log(`order complete for ${customer}`);
+  callback(customer);
 };
-takeOrder("mosfequr");
+
+takeOrder("mosfequr", (customer) => {
+  processOrder(customer, (customer) => {
+    completeOrder(customer);
+  });
+});
+
+/// end ///
+
+// how to handle javascript synchronous blocking behavior
+/// start ///
+// const takeOrder = (customer) => {
+//   console.log(`take order for ${customer}`);
+// };
+// const processOrder = (customer) => {
+//   console.log(`order processing for ${customer}`);
+//   setTimeout(() => {
+//     console.log(`cooking completed`);
+//     console.log(`order processing for ${customer} is successful`);
+//   }, 1000);
+// };
+
+// const completeOrder = (customer) => {
+//   console.log(`order complete for ${customer}`);
+// };
+// takeOrder("mosfequr");
 
 /// end ///
 
