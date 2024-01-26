@@ -1,4 +1,5 @@
-// using callback to handle javascript synchronous blocking behavior
+// using callback to handle javascript synchronous controle
+// callback hell arise
 /// start ///
 const takeOrder = (customer, callback) => {
   console.log(`take order for ${customer}`);
