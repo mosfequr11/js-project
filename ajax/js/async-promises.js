@@ -7,9 +7,16 @@ const promiseConcurrently2 = new Promise((resolve, reject) => {
   }, 1000);
 });
 
-promiseConcurrently1.then((res) => console.log(res));
-promiseConcurrently2.then((res) => console.log(res));
-
+// promiseConcurrently1.then((res) => console.log(res));
+// promiseConcurrently2.then((res) => console.log(res));
+// promise concurrently (Promise.all)
+Promise.all([promiseConcurrently1, promiseConcurrently2]).then((res) => {
+  console.log(res);
+});
+// promise race (one result showing)
+Promise.race([promiseConcurrently1, promiseConcurrently2]).then((res) => {
+  console.log(res);
+});
 /// end ///
 
 // start learning js promises in details (resolve,reject,then,catch)
