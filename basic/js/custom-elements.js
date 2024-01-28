@@ -11,5 +11,8 @@ function myCustomElements() {
 
   // Use the define() method to define
   // a new element
-  window.customElements.define("my-custom-element", myElement);
+  // window.customElements.define("my-custom-element", myElement);
+  customElements.define("my-custom-element", myElement);
 }
+
+// myCustomElements();
