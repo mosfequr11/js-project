@@ -1,4 +1,24 @@
 /// start ///
+/// When you pass a function as an argument, remember not to use parenthesis.
+// Right: displayNumTwo(sumNumTwo);
+// Wrong: displayNumTwo(sumNumTwo());
+/// end ///
+
+function displayNumTwo(sumNumTwo) {
+  document.getElementById("display-output").innerHTML = sumNumTwo;
+}
+// here p and q are function parameter
+function sumNumTwo() {
+  var g = 9;
+  var h = 9;
+  var total = g + h;
+  return total;
+}
+// sumNumTwo();
+displayNumTwo(sumNumTwo);
+/// start ///
+
+/// start ///
 /// Sequence Control
 function displayNum(displayNum) {
   document.getElementById("display-num-output").innerHTML = displayNum;
