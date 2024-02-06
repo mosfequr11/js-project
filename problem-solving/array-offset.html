@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Array Offset</title>
+</head>
+
+<body>
+  <h1>Array Offset</h1>
+
+  <script>
+    /// Moves the specified amount of elements to the end of the array.
+    // this is a function definition
+    function getOffset(arr, n, offset) {
+      offset = offset || 0;
+      var raw = (offset + n) % arr.length;
+      return raw < 0 ? arr[arr.length - Math.abs(raw)] : arr[raw];
+    }
+
+    var arr = ["a", "b", "c", "d", "e", "f"];
+    const firstOffset = getOffset(arr, -3, 2); //=> 'f'
+    console.log(firstOffset);
+    secondOffset = getOffset(arr, -3);   //=> 'd'
+    console.log(secondOffset);
+
+  </script>
+</body>
+
+</html>
