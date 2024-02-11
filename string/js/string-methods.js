@@ -1,4 +1,12 @@
 ///  Start  ///
+/// slice() extracts a part of a string and returns the extracted part in a new string.
+/// The method takes 2 parameters: start position, and end position (end not included).
+let contentTextThree = "I am an Engineer";
+let afterSlice = contentTextThree.slice(4, 13);
+document.getElementById("displaySlice").innerHTML = afterSlice;
+///  End  ///
+
+///  Start  ///
 /// concat() joins two or more strings:
 /// Note: All string methods return a new string. They don't modify the original string.Formally said: Strings are immutable: Strings cannot be changed, only replaced.
 let firstName = "Mosfequr";
