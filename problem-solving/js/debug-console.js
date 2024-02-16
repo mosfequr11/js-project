@@ -1,16 +1,28 @@
 /// start  ///
-/// learn console.assert()
-var firstNum = 6;
-var secondtNum = 7;
-// chech two number match or not
-if (firstNum == secondtNum) {
-  console.log("Number match");
-} else {
-  console.log("Number do not match");
-}
-// debug way chech two number match or not
-console.assert(firstNum == secondtNum, "do not match the number");
+/// learn console.table()
+const BMW = { model: "BMW", price: "450000" };
+const Toyota = { model: "Toyota", price: "350000" };
+const Bugatti = { model: "Bugatti", price: "650000" };
 
+// console.log(BMW, Toyota, Bugatti);
+// we can pass an object as an array
+// console.table([BMW, Toyota, Bugatti]);
+// specific property(key,value) keep its column
+console.table([BMW, Toyota, Bugatti], ["model"]);
+/// end  ///
+
+/// start  ///
+/// learn console.assert()
+// var firstNum = 6;
+// var secondtNum = 7;
+// // chech two number match or not
+// if (firstNum == secondtNum) {
+//   console.log("Number match");
+// } else {
+//   console.log("Number do not match");
+// }
+// // debug way check two number match or not
+// console.assert(firstNum == secondtNum, "do not match the number");
 /// end  ///
 
 /// start  ///
