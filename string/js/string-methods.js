@@ -1,4 +1,13 @@
 ///  Start  ///
+/// The charAt() method returns the character at a given position in a string
+/// The charCodeAt() method returns the unicode of the character at a given position in a string:
+var varCharAt = "HELLO WORLD";
+document.getElementById("displaycharAt").innerHTML = varCharAt.charAt(6);
+document.getElementById("displayCharCodeAt").innerHTML =
+  varCharAt.charCodeAt(6);
+///  End  ///
+
+///  Start  ///
 /// slice() extracts a part of a string and returns the extracted part in a new string.
 /// The method takes 2 parameters: start position, and end position (end not included).
 let contentTextThree = "I am an Engineer";
