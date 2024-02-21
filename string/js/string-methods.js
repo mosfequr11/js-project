@@ -1,4 +1,17 @@
 ///  Start  ///
+/// substring() is similar to slice().
+/// The difference is that start and end values less than 0 are treated as 0 in substring().
+/// If you omit the second parameter, substring() will slice out the rest of the string.
+var varSubstring = "My name is Mosfequr Rahamn";
+// document.getElementById("displaysubstring").innerHTML = varSubstring.substring(
+//   7,
+//   13
+// );
+document.getElementById("displaysubstring").innerHTML =
+  varSubstring.substring(8);
+///  End  ///
+
+///  Start  ///
 /// The charAt() method returns the character at a given position in a string
 /// The charCodeAt() method returns the unicode of the character at a given position in a string:
 var varCharAt = "HELLO WORLD";
