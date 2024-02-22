@@ -1,4 +1,15 @@
 ///  Start  ///
+/// substr() is similar to slice().
+/// The difference is that the second parameter specifies the length of the extracted part.
+/// If you omit the second parameter, substr() will slice out the rest of the string.
+var varSubstr = "My name is Mosfequr Rahamn";
+// document.getElementById("displaysubstr").innerHTML = varSubstr.substr(12);
+/// If the first parameter is negative, the position counts from the end of the string.
+// document.getElementById("displaysubstr").innerHTML = varSubstr.substr(11);
+document.getElementById("displaysubstr").innerHTML = varSubstr.substr(-2);
+///  End  ///
+
+///  Start  ///
 /// substring() is similar to slice().
 /// The difference is that start and end values less than 0 are treated as 0 in substring().
 /// If you omit the second parameter, substring() will slice out the rest of the string.
