@@ -1,4 +1,18 @@
 ///  Start  ///
+/// The replace() method replaces a specified value with another value in a string:
+/// By default, the replace() method is case sensitive.
+/// To replace case insensitive, use a regular expression with an /i flag (insensitive):
+
+function funReplace() {
+  let text = document.getElementById("displayReplace").innerHTML;
+  document.getElementById("displayReplace").innerHTML = text.replace(
+    "Engineer",
+    "Teacher"
+  );
+}
+///  End  ///
+
+///  Start  ///
 /// substr() is similar to slice().
 /// The difference is that the second parameter specifies the length of the extracted part.
 /// If you omit the second parameter, substr() will slice out the rest of the string.
