@@ -1,4 +1,16 @@
 ///  Start  ///
+/// The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+var textMatch = "I am an Engineer eng";
+// var textMatch = "I am an ineer ";
+// let varMatch = textMatch.match("Eng");
+// let varMatch = textMatch.match(/Eng/);
+// let varMatch = textMatch.match(/Eng/g);
+let varMatch = textMatch.match(/Eng/gi);
+
+document.getElementById("displayMatch").innerHTML = varMatch;
+///  end  ///
+
+///  Start  ///
 /// The search() method searches a string for a string (or a regular expression) and returns the position of the match:
 var textSearch = "I am an Engineer";
 // let varSearch = textSearch.search(Eng);
