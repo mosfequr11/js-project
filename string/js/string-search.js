@@ -1,4 +1,11 @@
 ///  Start  ///
+/// The includes() method returns true if a string contains a specified value. Otherwise it returns false.
+let textIncludes = "I am Mosfequr Rahman";
+let varIncludes = textIncludes.includes("Rahman");
+console.log(varIncludes);
+///  end  ///
+
+///  Start  ///
 /// The match() method returns an array containing the results of matching a string against a string (or a regular expression).
 var textMatch = "I am an Engineer eng";
 // var textMatch = "I am an ineer ";
