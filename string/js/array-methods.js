@@ -3,7 +3,12 @@
 ///  End  ///
 
 ///  Start  ///
-///
+///The shift() method removes the first array element and "shifts" all other elements to a lower index.
+var varShift = ["My", "name", "is", "Mosfequr", "Rahman", "Engineering"];
+document.getElementById("display-before").innerHTML = varShift;
+varShift.shift();
+document.getElementById("display-shift").innerHTML = varShift.shift();
+document.getElementById("display-shift-after").innerHTML = varShift;
 ///  End  ///
 
 ///  Start  ///
@@ -11,11 +16,10 @@
 const varPush = ["My", "Name", "is", "Mosfequr", "Rahman", "Engineering"];
 let tempPush = varPush.push("Engineering");
 document.getElementById("display-push").innerHTML = tempPush;
-console.log(varPush);
-const varPop = ["My", "Name", "is", "Mosfequr", "Rahman", "Engineering"];
+// console.log(varPush);
 let tempPop = varPush.pop();
 document.getElementById("display-pop").innerHTML = tempPop;
-console.log(tempPop);
+// console.log(tempPop);
 ///  End  ///
 
 ///  Start  ///
