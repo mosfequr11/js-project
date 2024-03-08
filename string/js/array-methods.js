@@ -3,6 +3,16 @@
 ///  End  ///
 
 ///  Start  ///
+/// The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+/// The unshift() method returns the new array length:
+var varUnShift = ["My", "name", "is", "Mosfequr", "Rahman", "Engineering"];
+document.getElementById("displayUnshift-before").innerHTML = varUnShift;
+varUnShift.unshift("Developer");
+document.getElementById("displayUnshift-after").innerHTML = varUnShift;
+
+///  End  ///
+
+///  Start  ///
 ///The shift() method removes the first array element and "shifts" all other elements to a lower index.
 var varShift = ["My", "name", "is", "Mosfequr", "Rahman", "Engineering"];
 document.getElementById("display-before").innerHTML = varShift;
