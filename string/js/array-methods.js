@@ -3,6 +3,15 @@
 ///  End  ///
 
 ///  Start  ///
+/// The splice() method can be used to add new items to an array:
+var varSplice = ["My", "name", "is", "Mosfequr", "Rahman", "Engineering"];
+document.getElementById("displaySplice").innerHTML = varSplice;
+varSplice.splice(2, 0, "Engineering", "Developer");
+document.getElementById("displaySpliceAfter").innerHTML = varSplice;
+
+///  End  ///
+
+///  Start  ///
 /// The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
 /// The unshift() method returns the new array length:
 var varUnShift = ["My", "name", "is", "Mosfequr", "Rahman", "Engineering"];
