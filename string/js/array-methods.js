@@ -3,6 +3,20 @@
 ///  End  ///
 
 ///  Start  ///
+/// The slice() method slices out a piece of an array into a new array:
+/// The slice() method creates a new array.
+/// The slice() method does not remove any elements from the source array.
+var varSlices = ["My", "name", "is", "Mosfequr", "Rahman", "Engineering"];
+var tempSlices = varSlices.slice(3);
+document.getElementById("sliceDisplay").innerHTML =
+  varSlices + "<br><br>" + tempSlices;
+/// The slice() method can take two arguments like slice(1, 3).
+var tempSlicesTwo = varSlices.slice(0, 4);
+document.getElementById("sliceDisplayTwo").innerHTML =
+  varSlices + "<br><br>" + tempSlicesTwo;
+///  End  ///
+
+///  Start  ///
 /// The splice() method can be used to add new items to an array:
 var varSplice = ["My", "name", "is", "Mosfequr", "Rahman", "Engineering"];
 document.getElementById("displaySplice").innerHTML = varSplice;
