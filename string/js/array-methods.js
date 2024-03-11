@@ -3,6 +3,16 @@
 ///  End  ///
 
 ///  Start  ///
+/// The concat() method creates a new array by merging (concatenating) existing arrays:
+const varName = ["Mosfequr", "Rahman"];
+const varDesignation = ["Engineering", "Teacher", "Developer"];
+const tempInfo = varName.concat(varDesignation);
+// check after joining two array
+console.log(tempInfo);
+document.getElementById("concatDisplay").innerHTML = tempInfo;
+///  End  ///
+
+///  Start  ///
 /// The slice() method slices out a piece of an array into a new array:
 /// The slice() method creates a new array.
 /// The slice() method does not remove any elements from the source array.
