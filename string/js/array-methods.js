@@ -1,5 +1,8 @@
 ///  Start  ///
-///
+/// The copyWithin() method copies array elements to another position in an array:
+const varcopyWithin = ["Engineering", "Teacher", "Developer", "Designation"];
+document.getElementById("copyWithinDisplay").innerHTML =
+  varcopyWithin.varcopyWithinn(2, 3);
 ///  End  ///
 
 ///  Start  ///
@@ -8,7 +11,7 @@ const varName = ["Mosfequr", "Rahman"];
 const varDesignation = ["Engineering", "Teacher", "Developer"];
 const tempInfo = varName.concat(varDesignation);
 // check after joining two array
-console.log(tempInfo);
+// console.log(tempInfo);
 document.getElementById("concatDisplay").innerHTML = tempInfo;
 ///  End  ///
 
