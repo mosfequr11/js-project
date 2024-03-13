@@ -1,4 +1,15 @@
 ///  Start  ///
+/// The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+const varFlat = [
+  [1, 2],
+  [3, 4],
+  [5, 6],
+];
+const tempFlat = varFlat.flat();
+document.getElementById("flatDisplay").innerHTML = tempFlat;
+///  End  ///
+
+///  Start  ///
 /// The copyWithin() method copies array elements to another position in an array:
 const varcopyWithin = ["Engineering", "Teacher", "Developer", "Designation"];
 document.getElementById("copyWithinDisplay").innerHTML =
