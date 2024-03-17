@@ -3,6 +3,19 @@
 /// End ///
 
 /// start ///
+
+/// End ///
+
+/// start ///
+// Changing an Array Element
+const varChangeArry = ["Mosfequr", "Rahman", "Engineer"];
+document.getElementById("oldArrDisplay").innerHTML = varChangeArry;
+varChangeArry[2] = "Developer";
+console.log(varChangeArry);
+document.getElementById("changeArryDisplay").innerHTML = varChangeArry;
+/// End ///
+
+/// start ///
 /// Accessing Array Elements
 const varAccessArry = ["Mosfequr", "Rahman", "Engineer"];
 let tempAccessArry = varAccessArry[0];
