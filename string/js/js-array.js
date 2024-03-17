@@ -3,7 +3,10 @@
 /// End ///
 
 /// start ///
-
+/// Converting an Array to a String
+/// The JavaScript method toString() converts an array to a string of (comma separated) array values.
+const varArrToStr = ["Mosfequr", "Rahman", "Engineer"];
+document.getElementById("arrToStrDisplay").innerHTML = varArrToStr.toString();
 /// End ///
 
 /// start ///
@@ -11,7 +14,7 @@
 const varChangeArry = ["Mosfequr", "Rahman", "Engineer"];
 document.getElementById("oldArrDisplay").innerHTML = varChangeArry;
 varChangeArry[2] = "Developer";
-console.log(varChangeArry);
+// console.log(varChangeArry);
 document.getElementById("changeArryDisplay").innerHTML = varChangeArry;
 /// End ///
 
@@ -19,9 +22,10 @@ document.getElementById("changeArryDisplay").innerHTML = varChangeArry;
 /// Accessing Array Elements
 const varAccessArry = ["Mosfequr", "Rahman", "Engineer"];
 let tempAccessArry = varAccessArry[0];
-let tempAccessArry2 = varAccessArry[1];
-console.log(tempAccessArry);
-console.log(tempAccessArry2);
+// console.log(tempAccessArry);
+document.getElementById("accessArrDisplay").innerHTML = tempAccessArry;
+// let tempAccessArry2 = varAccessArry[1];
+// console.log(tempAccessArry2);
 /// End ///
 
 /// start ///
