@@ -3,6 +3,19 @@
 /// End ///
 
 /// start ///
+/// Looping Array Elements
+const varLoopFor = ["Mosfequr", "Rahman", "Engineer"];
+let tempLen = varLoopFor.length;
+
+let innerElement = "<ul>";
+for (let i = 0; i < tempLen; i++) {
+  innerElement += "<li>" + varLoopFor[i] + "</li>";
+}
+innerElement += "</ul>";
+document.getElementById("loopForDisplay").innerHTML = innerElement;
+/// End ///
+
+/// start ///
 /// Converting an Array to a String
 /// The JavaScript method toString() converts an array to a string of (comma separated) array values.
 const varArrToStr = ["Mosfequr", "Rahman", "Engineer"];
