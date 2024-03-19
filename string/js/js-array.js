@@ -3,6 +3,19 @@
 /// End ///
 
 /// start ///
+/// use the Array.forEach() function
+const varLoopEach = ["Mosfequr", "Rahman", "Developer"];
+
+let varEach = "<ul>";
+varLoopEach.forEach(myEachFun);
+varEach += "</ul>";
+function myEachFun(jkl) {
+  varEach += "<li>" + jkl + "</li>";
+}
+document.getElementById("loopEachDisplay").innerHTML = varEach;
+/// End ///
+
+/// start ///
 /// Looping Array Elements
 const varLoopFor = ["Mosfequr", "Rahman", "Engineer"];
 let tempLen = varLoopFor.length;
