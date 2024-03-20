@@ -1,5 +1,17 @@
 /// start ///
-
+///  Associative Arrays
+/// In JavaScript, arrays always use numbered indexes.
+const person = [];
+person[0] = "Mosfequr";
+person[1] = "Rahman";
+person[2] = 28;
+console.log(person[0]);
+/// JavaScript does not support arrays with named indexes.
+const student = [];
+student["firstName"] = "Mosfequr";
+student["lasttName"] = "Rahman";
+student["age"] = 28;
+console.log(student["firstName"]);
 /// End ///
 
 /// start ///
