@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Static Class</title>
+</head>
+
+<body>
+  <h1>Static Class</h1>
+  <p id="showNumber"></p>
+
+  <script>
+
+    class Animal {
+      // The constructor() method is a special method for creating and initializing objects created within a class.
+      // Note: A class cannot have more than one constructor() method. This will throw a SyntaxError.
+      constructor(name) {
+        this.name = name;
+      }
+
+      eat() {
+        console.log(`${this.name} is eating.`);
+      }
+
+      static sleep() {
+        console.log(`${this.name} is sleeping.`);
+      }
+    }
+
+    const animal = new Animal("Tiger");
+
+    //You can call 'sleep()' on the Animal Class:
+    Animal.sleep();
+
+    // But NOT on  a animal Object:
+    animal.eat();
+    // animal.sleep();
+    // this will raise an error.
+
+  </script>
+</body>
+
+</html>
