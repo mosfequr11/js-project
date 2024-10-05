@@ -17,8 +17,8 @@ document.getElementById("idName3").innerHTML = hello();
 
 // If you have parameters, you pass them inside the parentheses:
 hello = (val) => "Hello World!" + val;
-document.getElementById("idName4").innerHTML = hello(" Universe!");
+document.getElementById("idName4").innerHTML = hello(" Universe! passing value");
 
 // In fact, if you have only one parameter, you can skip the parentheses as well:
 hello = val => "Hello World!" + val;
-document.getElementById("idName5").innerHTML = hello(" Universe Area");
+document.getElementById("idName5").innerHTML = hello(" Universe! passing value without bracket");
