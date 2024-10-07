@@ -57,7 +57,7 @@ const sectionCenter = document.querySelector(".menu-section .section-center");
 // display all items when page loads
 window.addEventListener("DOMContentLoaded", function () {
   diplayMenuItems(menu);
-  // displayMenuButtons(menu);
+  displayMenuButtons(menu);
 });
 
 // Function diplayMenuItems()
@@ -94,50 +94,59 @@ function diplayMenuItems(menu) {
   sectionCenter.innerHTML = displayMenu;
 }
 
-// Function displayMenuButtons ()
-const btnContainer = document.querySelector(".menu-section .btn-container");
+//  Function displayMenuButtons()
 function displayMenuButtons(menu) {
-  let menuButton = menu.map(function (item) {
-    return `<button type="button" class="filter-btn" data-id=${item.category}>
-    ${item.category}
-  </button>`;
-  });
-  console.log(menuButton);
-  menuButton = menuButton.join("");
-  btnContainer.innerHTML = menuButton;
-}
+  const btnContainer = document.querySelector(".menu-section .btn-container");
+  // array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+  const categories = menu.reduce(
+    function (values, item) {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
+  const categoryBtns = categories
+    .map(function (category) {
+      return `<button type="button" class="filter-btn" data-id=${category}>
+          ${category}
+        </button>`;
+    })
+    .join("");
+  btnContainer.innerHTML = categoryBtns;
+  // filter button
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  // all button list (NodeList)
+  // console.log(filterBtns);
+  // The forEach() method calls a function for each element in an array.
+  // The forEach() method is not executed for empty elements.
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      // check each data-id is existing or not (DOMStringMap)
+      // console.log(e.currentTarget.dataset);
+      const category = e.currentTarget.dataset.id;
+      // The filter() method creates a new array filled with elements that pass a test provided by a function.
+      // The filter() method does not execute the function for empty elements.
+      // The filter() method does not change the original array.
+      const menuCategory = menu.filter(function (menuItem) {
+        // here (menuItem = menu)
+        // console.log(menuItem.category);
+        // Check menu items category is existiung or not
+        if (menuItem.category === category) {
+          return menuItem;
+        }
+      });
 
-// filter button
-const filterBtns = document.querySelectorAll(".filter-btn");
-// all button list (NodeList)
-// console.log(filterBtns);
-// The forEach() method calls a function for each element in an array.
-// The forEach() method is not executed for empty elements.
-filterBtns.forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
-    // check each data-id is existing or not (DOMStringMap)
-    // console.log(e.currentTarget.dataset);
-    const category = e.currentTarget.dataset.id;
-    // The filter() method creates a new array filled with elements that pass a test provided by a function.
-    // The filter() method does not execute the function for empty elements.
-    // The filter() method does not change the original array.
-    const menuCategory = menu.filter(function (menuItem) {
-      // here (menuItem = menu)
-      // console.log(menuItem.category);
-      // Check menu items category is existiung or not
-      if (menuItem.category === category) {
-        return menuItem;
+      if (category === "all") {
+        // show all category menu items
+        // console.log(menu);
+        diplayMenuItems(menu);
+      } else {
+        // show specific category menu items
+        // console.log(menuCategory);
+        diplayMenuItems(menuCategory);
       }
     });
-
-    if (category === "all") {
-      // show all category menu items
-      // console.log(menu);
-      diplayMenuItems(menu);
-    } else {
-      // show specific category menu items
-      // console.log(menuCategory);
-      diplayMenuItems(menuCategory);
-    }
   });
-});
+}
