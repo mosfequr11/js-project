@@ -56,6 +56,12 @@ const sectionCenter = document.querySelector(".menu-section .section-center");
 // The DOMContentLoaded event fires when the HTML document has been completely parsed
 // display all items when page loads
 window.addEventListener("DOMContentLoaded", function () {
+  diplayMenuItems(menu);
+  displayMenuButtons(menu);
+});
+
+// Function diplayMenuItems()
+function diplayMenuItems(menu) {
   //map() creates a new array from calling a function for every array element.
   let displayMenu = menu.map(function (item) {
     // Here (menu = item )
@@ -86,36 +92,61 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Now add Menu items in Section Container
   sectionCenter.innerHTML = displayMenu;
-});
+}
 
-// filter button
-const filterBtns = document.querySelectorAll(".filter-btn");
-// all button list (NodeList)
-// console.log(filterBtns);
-// The forEach() method calls a function for each element in an array.
-// The forEach() method is not executed for empty elements.
-filterBtns.forEach(function (btn) {
-  btn.addEventListener("click", function (e) {
-    // check each data-id is existing or not (DOMStringMap)
-    // console.log(e.currentTarget.dataset);
-    const category = e.currentTarget.dataset.id;
-    // The filter() method creates a new array filled with elements that pass a test provided by a function.
-    // The filter() method does not execute the function for empty elements.
-    // The filter() method does not change the original array.
-    const menuCategory = menu.filter(function (menuItem) {
-      // here (menuItem = menu)
-      // console.log(menuItem.category);
-      // Check menu items category is existiung or not
-      if (menuItem.category === category) {
-        return menuItem;
+//  Function displayMenuButtons()
+function displayMenuButtons(menu) {
+  const btnContainer = document.querySelector(".menu-section .btn-container");
+  // array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+  const categories = menu.reduce(
+    function (values, item) {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
+  const categoryBtns = categories
+    .map(function (category) {
+      return `<button type="button" class="filter-btn" data-id=${category}>
+          ${category}
+        </button>`;
+    })
+    .join("");
+  btnContainer.innerHTML = categoryBtns;
+  // filter button
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  // all button list (NodeList)
+  // console.log(filterBtns);
+  // The forEach() method calls a function for each element in an array.
+  // The forEach() method is not executed for empty elements.
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      // check each data-id is existing or not (DOMStringMap)
+      // console.log(e.currentTarget.dataset);
+      const category = e.currentTarget.dataset.id;
+      // The filter() method creates a new array filled with elements that pass a test provided by a function.
+      // The filter() method does not execute the function for empty elements.
+      // The filter() method does not change the original array.
+      const menuCategory = menu.filter(function (menuItem) {
+        // here (menuItem = menu)
+        // console.log(menuItem.category);
+        // Check menu items category is existiung or not
+        if (menuItem.category === category) {
+          return menuItem;
+        }
+      });
+
+      if (category === "all") {
+        // show all category menu items
+        // console.log(menu);
+        diplayMenuItems(menu);
+      } else {
+        // show specific category menu items
+        // console.log(menuCategory);
+        diplayMenuItems(menuCategory);
       }
     });
-    if (category === "all") {
-      // diplayMenuItems(menu);
-      console.log(menu);
-    } else {
-      // diplayMenuItems(menuCategory);
-      console.log(menuCategory);
-    }
   });
-});
+}
