@@ -56,6 +56,12 @@ const sectionCenter = document.querySelector(".menu-section .section-center");
 // The DOMContentLoaded event fires when the HTML document has been completely parsed
 // display all items when page loads
 window.addEventListener("DOMContentLoaded", function () {
+  diplayMenuItems(menu);
+  // displayMenuButtons(menu);
+});
+
+// Function diplayMenuItems()
+function diplayMenuItems(menu) {
   //map() creates a new array from calling a function for every array element.
   let displayMenu = menu.map(function (item) {
     // Here (menu = item )
@@ -86,7 +92,20 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Now add Menu items in Section Container
   sectionCenter.innerHTML = displayMenu;
-});
+}
+
+// Function displayMenuButtons ()
+const btnContainer = document.querySelector(".menu-section .btn-container");
+function displayMenuButtons(menu) {
+  let menuButton = menu.map(function (item) {
+    return `<button type="button" class="filter-btn" data-id=${item.category}>
+    ${item.category}
+  </button>`;
+  });
+  console.log(menuButton);
+  menuButton = menuButton.join("");
+  btnContainer.innerHTML = menuButton;
+}
 
 // filter button
 const filterBtns = document.querySelectorAll(".filter-btn");
@@ -110,12 +129,15 @@ filterBtns.forEach(function (btn) {
         return menuItem;
       }
     });
+
     if (category === "all") {
-      // diplayMenuItems(menu);
-      console.log(menu);
+      // show all category menu items
+      // console.log(menu);
+      diplayMenuItems(menu);
     } else {
-      // diplayMenuItems(menuCategory);
-      console.log(menuCategory);
+      // show specific category menu items
+      // console.log(menuCategory);
+      diplayMenuItems(menuCategory);
     }
   });
 });
