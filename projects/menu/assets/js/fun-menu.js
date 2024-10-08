@@ -97,9 +97,14 @@ function diplayMenuItems(menu) {
 //  Function displayMenuButtons()
 function displayMenuButtons(menu) {
   const btnContainer = document.querySelector(".menu-section .btn-container");
+  // The reduce() method returns a single value: the function's accumulated result.
+  // The reduce() method does not execute the function for empty array elements.
+  // The reduce() method does not change the original array.
   // array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
   const categories = menu.reduce(
     function (values, item) {
+      // console.log(values);
+      // console.log(item); // here item = menu
       if (!values.includes(item.category)) {
         values.push(item.category);
       }
