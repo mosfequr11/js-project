@@ -1,0 +1,14 @@
+.slider-section {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: column;
+  margin: 70px auto;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+}
+.item-slide{
+  height: auto;
+}
