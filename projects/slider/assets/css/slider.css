@@ -1,5 +1,5 @@
 .slider-section {
-  max-width: 1170px;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   margin: 70px auto;
@@ -9,6 +9,29 @@
   display: flex;
   justify-content: center;
 }
-.item-slide{
-  height: auto;
+
+.item-slide {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  transition: all 0.25s ease-in-out;
+  text-align: center;
+  justify-content: center;
+}
+
+.item-slide h1 {
+  position: absolute;
+  color: #ffffff;
+  font-size: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.slide:nth-child(1) h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
